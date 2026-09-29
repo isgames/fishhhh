@@ -199,12 +199,12 @@ const unityApp = {
         }
 
         const buildUrl = "Build";
-        const loaderUrl = buildUrl + "/CartRideObby.loader.js";
+        const loaderUrl = "CartRideObby.loader.js";
         const config = {
             arguments: [],
-            dataUrl: buildUrl + "/CartRideObby.data.unityweb",
-            frameworkUrl: buildUrl + "/CartRideObby.framework.js",
-            codeUrl: buildUrl + "/CartRideObby.wasm.unityweb",
+            dataUrl:"CartRideObby.data.unityweb",
+            frameworkUrl:"CartRideObby.framework.js",
+            codeUrl: "CartRideObby.wasm.unityweb",
             streamingAssetsUrl: "StreamingAssets",
             companyName: "MaxDigitArt",
             productName: "Roller Coaster Obby Race",
