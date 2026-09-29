@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body style="margin: 0; padding: 0; overflow: hidden; background: #231F20;">
-    <div id="unity-container" style="position: width: 100%; height: 100%;">
+    <div id="unity-container" style="width: 100%; height: 100%;">
         <canvas id="unity-canvas" width=100% height=100% tabindex="-1"></canvas>
         <div id="unity-loading-bar" style="display: block; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); text-align: center;">
             <div id="unity-logo" style="width: 154px; height: 130px; background: url('TemplateData/unity-logo-dark.png') no-repeat center;"></div>
@@ -22,7 +22,7 @@
       var loaderUrl = buildUrl + "/CartRideObby.loader.js";
       var config = {
         dataUrl: buildUrl + "/CartRideObby.data.unityweb",
-        frameworkUrl: buildUrl + "/CartRideObby.framework.js.unityweb",
+        frameworkUrl: buildUrl + "/CartRideObby.framework.js",
         codeUrl: buildUrl + "/CartRideObby.wasm.unityweb",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "DefaultCompany",
@@ -42,9 +42,9 @@
           progressBarFull.style.width = 100 * progress + "%";
         }).then((unityInstance) => {
           loadingBar.style.display = "none";
-        }).zIndex = (message) => {
+        }).catch((message) => {
           console.error(message);
-        };
+        });
       };
       document.body.appendChild(script);
     </script>
